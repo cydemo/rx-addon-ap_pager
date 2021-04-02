@@ -1,0 +1,140 @@
+.ap_pager_content {
+	position: relative;
+}
+
+.ap_page_navigation {
+	margin: 30px auto;
+	padding: 0;
+}
+.ap_page_navigation * {
+	margin: 0;
+	padding: 0;
+}
+.ap_page_navigation a {
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	background: #fff;
+	color: #666;
+	text-decoration: none;
+	white-space: nowrap;
+}
+.ap_page_navigation a:hover,
+.ap_page_navigation a:active {
+	background: #ccc;
+	color: #fff;
+	text-decoration: none;
+}
+.ap_navigation {
+	text-align: justify;
+}
+.ap_navigation a {
+	display: inline-block;
+	padding: 6px 12px;
+	font-size: 16px;
+}
+.ap_navigation a.next {
+	float: right;
+}
+.ap_navigation a.dummy {
+	width: 100%;
+	padding: 0;
+	border: 0;
+}
+.ap_pagination ul {
+	text-align: center;
+}
+.ap_pagination li {
+	list-style: none;
+	display: inline;
+	line-height: 2.5;
+}
+.ap_pagination li a,
+.ap_pagination li span {
+	padding: 4px 8px;
+	font-size: 12px;
+}
+.ap_pagination li span {
+	border: 1px solid #999;
+	border-radius: 5px;
+	background: #999;
+	color: #fff;
+	font-weight: bold;
+}
+
+/* https://xetown.com/tips/248952 참조 */
+.ap_pager_loading {
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin: -30px 0 0 -30px;
+	width: 50px;
+	height: 50px;
+	background-color: transparent;
+	border: 5px solid #243040;
+	border-right-color: transparent;
+	border-radius: 50%;
+	box-sizing: border-box;
+	z-index: 2;
+	-webkit-animation-duration: 0.45s;
+	-moz-animation-duration: 0.45s;
+	animation-duration: 0.45s;
+	-webkit-animation-iteration-count: infinite;
+	-moz-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	-webkit-animation-name: rotate-forever;
+	-moz-animation-name: rotate-forever;
+	animation-name: rotate-forever;
+	-webkit-animation-timing-function: linear;
+	-moz-animation-timing-function: linear;
+	animation-timing-function: linear;
+}
+
+@-webkit-keyframes rotate-forever {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+} 
+@-moz-keyframes rotate-forever {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+} 
+@keyframes rotate-forever {
+	0% {
+		-webkit-transform: rotate(0deg);
+		-moz-transform: rotate(0deg);
+		-ms-transform: rotate(0deg);
+		-o-transform: rotate(0deg);
+		transform: rotate(0deg)
+	}
+	100% {
+		-webkit-transform: rotate(360deg);
+		-moz-transform: rotate(360deg);
+		-ms-transform: rotate(360deg);
+		-o-transform: rotate(360deg);
+		transform: rotate(360deg)
+	}
+}

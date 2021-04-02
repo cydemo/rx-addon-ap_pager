@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<addon version="0.2">
+
+	<title xml:lang="ko">쪽 나누기 애드온</title>
+	<description xml:lang="ko">사용자가 입력한 임의의 문자열(페이지 브레이커) 또는 이미지들을 기준으로 게시판 본문 내용을 나눠서 볼 수 있게 해주는 애드온</description>
+	<version>1.4.0</version>
+    <date>2019-02-07</date>
+
+    <author email_address="cydemo@gmail.com" link="https://www.xetown.com">
+        <name xml:lang="ko">cydemo</name>
+    </author>
+
+	<extra_vars>
+		<group>
+			<title xml:lang="ko">1. 기본 설정</title>
+			<var name="page_divider" type="select">
+				<title xml:lang="ko">쪽 나누기 방식</title>
+				<description xml:lang="ko">쪽 나누기 방식을 '페이지 브레이커' 또는 '이미지' 단위로 지정합니다.</description>
+				<options value="page_breaker">
+					<title xml:lang="ko">페이지 브레이커 (기본)</title>
+				</options>
+				<options value="image">
+					<title xml:lang="ko">이미지</title>
+				</options>
+			</var>
+			<var name="skin" type="text">
+				<title xml:lang="ko">페이지네이션 스킨</title>
+				<description xml:lang="ko">페이지네이션 스킨 폴더 이름을 지정합니다.(기본 폴더 이름은 default)</description>
+			</var>
+			<var name="page_count" type="text">
+				<title xml:lang="ko">페이지 링크 개수</title>
+				<description xml:lang="ko">페이지 내비게이션에 표시할 페이지 링크의 개수를 지정합니다.(기본값 5)</description>
+			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">2. 페이지 구분자</title>
+			<var name="page_starter" type="text">
+				<title xml:lang="ko">페이지 스타터</title>
+				<description xml:lang="ko">본문 내에서 쪽 나누기 영역 시작을 식별시켜주는 문자열을 지정합니다.(기본값은 [-s])</description>
+			</var>
+			<var name="page_breaker" type="text">
+				<title xml:lang="ko">페이지 브레이커</title>
+				<description xml:lang="ko">본문 내에서 쪽과 쪽을 구분시켜주는 문자열을 지정합니다.(기본값은 [-])</description>
+			</var>
+			<var name="page_finisher" type="text">
+				<title xml:lang="ko">페이지 피니셔</title>
+				<description xml:lang="ko">본문 내에서 쪽 나누기 영역 종료를 식별시켜주는 문자열을 지정합니다.(기본값은 [-f])</description>
+			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">3. 상단/하단 커스터마이징</title>
+			<var name="page_upper" type="textarea">
+				<title xml:lang="ko">상단 내용</title>
+				<description xml:lang="ko">쪽 나누기 영역 상단에 html 소스를 추가할 수 있습니다.</description>
+			</var>
+			<var name="page_under" type="textarea">
+				<title xml:lang="ko">하단 내용</title>
+				<description xml:lang="ko">쪽 나누기 영역 하단에 html 소스를 추가할 수 있습니다.</description>
+			</var>
+		</group>
+		<group>
+			<title xml:lang="ko">4. Default 스킨 설정</title>
+			<var name="button" type="select">
+				<title xml:lang="ko">본문 내비 버튼</title>
+				<description xml:lang="ko">앞뒤 이동 버튼을 본문 측면에 고정할 수 있습니다.</description>
+				<options value="1">
+					<title xml:lang="ko">사용함 (기본)</title>
+				</options>
+				<options value="0">
+					<title xml:lang="ko">사용 안 함</title>
+				</options>
+			</var>
+			<var name="swipe" type="select">
+				<title xml:lang="ko">스와이프 옵션</title>
+				<description xml:lang="ko">앞뒤 이동을 스와이프를 통해서도 가능하게 할 수 있습니다.</description>
+				<options value="1">
+					<title xml:lang="ko">사용함 (기본)</title>
+				</options>
+				<options value="0">
+					<title xml:lang="ko">사용 안 함</title>
+				</options>
+			</var>
+			<var name="ajax" type="select">
+				<title xml:lang="ko">AJAX 옵션</title>
+				<description xml:lang="ko">페이지 새로고침 없이 쪽과 쪽 사이를 이동할 수 있습니다.</description>
+				<options value="1">
+					<title xml:lang="ko">사용함 (기본)</title>
+				</options>
+				<options value="0">
+					<title xml:lang="ko">사용 안 함</title>
+				</options>
+			</var>
+			<var name="offset" type="text">
+				<title xml:lang="ko">AJAX 쪽 이동 후 위치</title>
+				<description xml:lang="ko">ajax 옵션을 사용했을 때, 쪽 이동을 하게 되면 전체 페이지 중에서 특정 요소로 이동하게 됩니다(예. 'body', '.rd', '#cmtPosition' 등). 아무 값도 입력하지 않으면 그냥 ajax 처리만 됩니다.</description>
+			</var>
+		</group>
+	</extra_vars>
+
+</addon>

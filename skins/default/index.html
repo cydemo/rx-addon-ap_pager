@@ -1,0 +1,28 @@
+<div class="ap_page_navigation" cond="$ap_page_navigation">
+	<load target="css/default.css" />
+	<div class="ap_navigation" cond="!$ap_pager->button">
+		{@ $prev_page = max($upage-1, 1);}
+		{@ $next_page = min($upage+1, $ap_page_navigation->last_page);}
+		<a class="prev" cond="$upage != $prev_page" href="{getUrl('upage',$prev_page,'division',$division,'last_division',$last_division)}" title="{$lang->cmd_prev}">< Prev</a>
+		<a class="next" cond="$upage != $next_page" href="{getUrl('upage',$next_page,'division',$division,'last_division',$last_division)}" title="{$lang->cmd_next}">Next ></a>
+		<a class="dummy"></a>
+	</div>
+	<div class="ap_pagination">
+		<ul>
+			<li>
+				<span cond="$upage == 1" >1</span>
+				<a cond="$upage != 1" href="{getUrl('upage','','division',$division,'last_division',$last_division)}" title="{$lang->first_page}">1</a>
+			</li>
+			<span cond="$upage>($ap_pager->page_count)/2+2">...</span>
+			<li loop="$page_no = $ap_page_navigation->getNextPage()" cond="$page_no != 1 && $page_no != $ap_page_navigation->last_page">
+				<span cond="$upage == $page_no" >{$page_no}</span>
+				<a cond="$upage != $page_no" href="{getUrl('upage',$page_no,'division',$division,'last_division',$last_division)}">{$page_no}</a>
+			</li>
+			<span cond="($upage+($ap_pager->page_count+1)/2<$ap_page_navigation->last_page) && ($ap_pager->page_count+1<$ap_page_navigation->last_page)">...</span>
+			<li cond="$ap_page_navigation->last_page != 1">
+				<span cond="$upage == $ap_page_navigation->last_page" >{$ap_page_navigation->last_page}</span>
+				<a cond="$upage != $ap_page_navigation->last_page" href="{getUrl('upage',$ap_page_navigation->last_page,'division',$division,'last_division',$last_division)}" title="{$lang->last_page}">{$ap_page_navigation->last_page}</a>
+			</li>
+		</ul>
+	</div>
+</div>

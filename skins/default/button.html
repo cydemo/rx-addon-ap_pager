@@ -1,0 +1,7 @@
+<div class="ap_navi_button" cond="$ap_page_navigation">
+	<load target="css/button.css" />
+	{@ $prev_page = max($upage-1, 1);}
+	{@ $next_page = min($upage+1, $ap_page_navigation->last_page);}
+	<a class="prev" cond="$upage != $prev_page" href="{getUrl('upage',$prev_page,'division',$division,'last_division',$last_division)}" title="{$lang->cmd_prev}"><</a>
+	<a class="next" cond="$upage != $next_page" href="{getUrl('upage',$next_page,'division',$division,'last_division',$last_division)}" title="{$lang->cmd_next}">></a>
+</div>
