@@ -3,8 +3,8 @@
 
 	<title xml:lang="ko">쪽 나누기 애드온</title>
 	<description xml:lang="ko">사용자가 입력한 임의의 문자열(페이지 브레이커) 또는 이미지들을 기준으로 게시판 본문 내용을 나눠서 볼 수 있게 해주는 애드온</description>
-	<version>1.4.0</version>
-    <date>2019-02-07</date>
+	<version>1.4.1</version>
+    <date>2021-04-02</date>
 
     <author email_address="cydemo@gmail.com" link="https://www.xetown.com">
         <name xml:lang="ko">cydemo</name>
